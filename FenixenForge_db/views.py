@@ -2,14 +2,14 @@ import logging
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.generics import get_object_or_404
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import IsAuthenticated
 from .models import Product
 from .serializers import ProductMainSerializer, ProductUpdateSerializer, VersionHistorySerializer, ProductDetailSerializer
 
 logger = logging.getLogger(__name__)
 
 class ProductListView(APIView):
-    permission_classes = [AllowAny] 
+    permission_classes = [IsAuthenticated] 
 
     def get(self, request):
         logger.info("Fetching all products")
@@ -19,7 +19,7 @@ class ProductListView(APIView):
         return Response(serializer.data)
 
 class ProductMainView(APIView):
-    permission_classes = [AllowAny] 
+    permission_classes = [IsAuthenticated] 
 
     def get(self, request, name):
         logger.info(f"Fetching product details for: {name}")
@@ -28,7 +28,7 @@ class ProductMainView(APIView):
         return Response(serializer.data)
 
 class ProductSectionView(APIView):
-    permission_classes = [AllowAny] 
+    permission_classes = [IsAuthenticated] 
 
     def get(self, request, name, section):
         logger.info(f"Fetching {section} for product: {name}")
@@ -47,7 +47,7 @@ class ProductSectionView(APIView):
             return Response({"detail": "Invalid section"}, status=400)
 
 class ProductDownloadView(APIView):
-    permission_classes = [AllowAny] 
+    permission_classes = [IsAuthenticated] 
 
     def post(self, request, name):
         logger.info(f"Incrementing downloads for product: {name}")

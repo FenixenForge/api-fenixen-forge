@@ -126,13 +126,16 @@ WSGI_APPLICATION = 'App.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+from dotenv import load_dotenv
+load_dotenv()
+
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'defaultdb',
         'USER': 'avnadmin',
-        'PASSWORD': 'AVNS_WI-8R3yhJl11a3TnPBv',
+        'PASSWORD': os.getenv("PASS"),
         'HOST': 'pg-19c47fbc-fenixen-forge-db.l.aivencloud.com',
         'PORT': '15749',
         'OPTIONS': {

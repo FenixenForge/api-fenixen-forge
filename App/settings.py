@@ -136,7 +136,7 @@ DATABASES = {
         'NAME': 'defaultdb',
         'USER': 'avnadmin',
         'PASSWORD': os.getenv("PASS"),
-        'HOST': 'pg-19c47fbc-fenixen-forge-db.l.aivencloud.com',
+        'HOST': os.getenv("HOST"),
         'PORT': '15749',
         'OPTIONS': {
             'sslmode': 'require',  # Requiere SSL para conexiones seguras

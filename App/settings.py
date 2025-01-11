@@ -116,15 +116,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'App.wsgi.app'
 
-
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-from dotenv import load_dotenv
-
-# Cargar variables desde el archivo .env en desarrollo
-if os.getenv("VERCEL_ENV") is None:
-    load_dotenv()
-
 SECRET_KEY = "django-insecure-#y108j)dk$x*mz4h(4zai*tu-tuqr_+yfzzm7)+fn417)&mt!m"
 
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"

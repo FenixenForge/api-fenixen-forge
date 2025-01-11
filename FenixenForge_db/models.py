@@ -6,7 +6,7 @@ class Product(models.Model):
     description = models.TextField()
     category = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    image = models.ImageField(upload_to="products/images/", null=True, blank=True)
+    image_url = models.URLField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     downloads = models.PositiveIntegerField(default=0)
 
@@ -23,7 +23,7 @@ class ProductDescription(models.Model):
     titulo = models.CharField(max_length=100, null=True, blank=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="descriptions")
     description = models.TextField()
-    image = models.ImageField(upload_to="products/descriptions/", null=True, blank=True)
+    image_url = models.URLField(null=True, blank=True)
 
     def __str__(self):
         return f"Description for {self.product.name}"

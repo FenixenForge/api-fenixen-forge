@@ -124,7 +124,7 @@ if os.getenv("VERCEL_ENV") is None:
 
 SECRET_KEY = "django-insecure-#y108j)dk$x*mz4h(4zai*tu-tuqr_+yfzzm7)+fn417)&mt!m"
 
-DEBUG = os.getenv("DEBUG", "False").lower() == "true"
+DEBUG = True
 
 DATABASES = {
     'default': {

@@ -11,7 +11,7 @@ from .models import (
 class ProductDescriptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProductDescription
-        fields = ['id', 'description', 'image', 'titulo']
+        fields = ['id', 'description', 'image_url', 'titulo']
 
 class VersionHistorySerializer(serializers.ModelSerializer):
     class Meta:
@@ -30,7 +30,7 @@ class ProductMainSerializer(serializers.ModelSerializer):
             'description',
             'category',
             'price',
-            'image',
+            'image_url',
             'downloads',
             'descriptions',
             'url_download',
@@ -49,4 +49,4 @@ class ProductUpdateSerializer(serializers.ModelSerializer):
 class ProductDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ['id', 'name', 'description', 'category', 'price', 'image', 'downloads']
+        fields = ['id', 'name', 'description', 'category', 'price', 'image_url', 'downloads']

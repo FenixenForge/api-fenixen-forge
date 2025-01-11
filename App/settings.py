@@ -132,7 +132,7 @@ from dotenv import load_dotenv
 if os.getenv("VERCEL_ENV") is None:
     load_dotenv()
 
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
 DATABASES = {

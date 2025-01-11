@@ -42,7 +42,9 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://192.168.1.64:3000",
     "http://fenixenforge.com",
+    "fenixenforge.com",
     "http://api.fenixenforge.com",
+    "api.fenixenforge.com",
 ]
  # Only for development, remove in production
 CORS_ALLOW_CREDENTIALS = True

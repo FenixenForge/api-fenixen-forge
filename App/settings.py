@@ -123,9 +123,6 @@ if os.getenv("VERCEL_ENV") is None:
     load_dotenv()
 
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
-if not SECRET_KEY:
-    raise django.core.exceptions.ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
-
 
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 

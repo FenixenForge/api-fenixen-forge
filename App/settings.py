@@ -5,7 +5,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ALLOWED_HOSTS = ['.vercel.app','127.0.0.1', 'localhost', "http://fenixenforge.com", "http://api.fenixenforge.com",]
+ALLOWED_HOSTS = ['.vercel.app','127.0.0.1', 'localhost', "fenixenforge.com", "api.fenixenforge.com",]
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

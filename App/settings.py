@@ -122,7 +122,7 @@ from dotenv import load_dotenv
 if os.getenv("VERCEL_ENV") is None:
     load_dotenv()
 
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+SECRET_KEY = "django-insecure-#y108j)dk$x*mz4h(4zai*tu-tuqr_+yfzzm7)+fn417)&mt!m"
 
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 

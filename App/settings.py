@@ -128,11 +128,11 @@ DEBUG = True
 
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv("ENGINE"),
+        'ENGINE': "django.db.backends.postgresql",
         'NAME': 'defaultdb',
         'USER': 'avnadmin',
-        'PASSWORD': os.getenv("PASS"),
-        'HOST': os.getenv("HOST"),
+        'PASSWORD':"AVNS_WI-8R3yhJl11a3TnPBv",
+        'HOST': "pg-19c47fbc-fenixen-forge-db.l.aivencloud.com",
         'PORT': '15749',
         'OPTIONS': {
             'sslmode': 'require',
